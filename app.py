@@ -1,3 +1,5 @@
+ 
+# Flask web app for predictions
 from flask import Flask, request, jsonify
 import joblib
 import os
@@ -51,7 +53,7 @@ def predict():
  
         # Predict the risk category
         prediction = model.predict(input_scaled)
-        risk_category = "High Risk" if prediction[0] == 1 else "Low Risk"
+        risk_category = "You have high risk of CVD ADVICE: Please consult your Cardiologist for a comprehensive evaluation" if prediction[0] == 1 else "You have low risk of CVD ADVICE: Maintain a healthy lifestyle to keep risks low."
  
         return jsonify({'prediction': risk_category})
     except Exception as e:
@@ -60,3 +62,5 @@ def predict():
  
 if __name__ == '__main__':
     app.run(debug=True)
+ 
+ 

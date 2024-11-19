@@ -41,7 +41,7 @@ if 'risk_category' not in merged_df.columns:
         risk_score = 0
  
         # Add points for high values in each health indicator (based on thresholds)
-        if row['systolic_bp'] > 160:
+        if row['systolic_bp'] > 150:
             risk_score += 1
         if row['diastolic_bp'] > 100:
             risk_score += 1
@@ -139,7 +139,4 @@ y_pred = model.predict(X_test_scaled)
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
  
-# Print model accuracy
-accuracy = model.score(X_test_scaled, y_test)
-# print(f"Model Accuracy: {accuracy * 100:.2f}%")
 print("Model and scaler saved successfully.")
