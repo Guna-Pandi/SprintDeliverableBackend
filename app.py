@@ -41,7 +41,7 @@ def health_advice(smoking_status, prediction):
 
     elif smoking_status == 2:  # Regular Smoker
         if prediction == "Low Risk (Regular Smoker)":
-            return "You are at a low health risk, but smoking remains a major factor in increasing long-term health problems. Consider quitting smoking and adopting a healthier lifestyle."
+            return "You are at a low health risk, but smoking remains a major factor in increasing long-term health problems. Consider attending a rehabilitation program  and adopting a healthier lifestyle."
         else:
             return "You have a high health risk due to smoking and other factors. Please see a healthcare provider immediately to discuss smoking cessation and other lifestyle changes."
 
